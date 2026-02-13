@@ -1,4 +1,4 @@
-### ClassOnline – Plataforma Web Educativa con JSP
+### ClassOnline – Plataforma Web Educativa con JSP - 2023
 
 ClassOnline es una plataforma web educativa desarrollada con Java y JSP, orientada a la gestión y visualización de contenidos académicos en línea.
 
@@ -26,3 +26,4 @@ El sistema permite organizar recursos educativos digitales, integrar contenido m
 ## Objetivo
 
 Aplicar principios de desarrollo web dinámico utilizando Java, estructuración modular del código y control de versiones.
+
