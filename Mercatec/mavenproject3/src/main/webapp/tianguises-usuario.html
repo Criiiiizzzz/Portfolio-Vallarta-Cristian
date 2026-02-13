@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="mapa.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+        <script>
+            let preveiwContainer = document.querySelector('.products-preview');
+            let previewBox = preveiwContainer.querySelectorAll('.preview');
+
+            document.querySelectorAll('.products-container .product').forEach(product => {
+                product.onclick = () => {
+                    preveiwContainer.style.display = 'flex';
+                    let name = product.getAttribute('data-name');
+                    previewBox.forEach(preview => {
+                        let target = preview.getAttribute('data-target');
+                        if (name == target) {
+                            preview.classList.add('active');
+                        }
+                    });
+                };
+            });
+
+            previewBox.forEach(close => {
+                close.querySelector('.fa-times').onclick = () => {
+                    close.classList.remove('active');
+                    preveiwContainer.style.display = 'none';
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <section class="Menu">
+            <header class="main-header">
+                <div class="container container--flex">
+                    <div class="main-header__container">
+                        <h1 class="main-header__title">MERCATEC</h1>
+                        <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+                        <nav class="main-nav" id="main-nav">
+                            <ul class="menu">
+                                <li class="menu__item"><a href="index.html" class="menu__link">INICIO</a></li>
+                                <li class="menu__item"><a href="tianguises.html" class="menu__link">TIANGUISES</a>
+                                <li class="menu__item"><a href="nosotros.html" class="menu__link">NOSOTROS</a></li>
+                                <li class="menu__item"><a href="usuario.html" class="menu__link">SESION</a></li>
+                                <li class="menu__item"><a href="contacto.html" class="menu__link">AYUDA</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="main-header__container" align="left">
+                        <span class="main-header__txt">Reportar Problema</span>
+                        <p class="main-header__txt"> Llama 5528502597</p>
+                    </div>
+                    <div class="main-header__container">
+                        <a href="sesiiones.html" class="main-header__link"><img src="imagenes/usuario2.png" style="width: 15px; height: 15px"></a>
+                        <a href="carrito.jsp" class="main-header__btn">Mi carrito</a> 
+                        <input type="search" class="main-header__input" placeholder="Buscar productos">
+
+                        <a href="index.html"><img src="imagenes/lupa.png" style="width: 20px; height: 20px"></a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <section class="container">
+
+            <header><link rel="stylesheet" href="tianguises.css"/></header>
+            <h3 class="title"> &bull; Mercados &bull; </h3>
+            <h2 class="main-header__txt"></h2>
+            <div >
+                    <h1>Ubicación </h1>
+                    <select name="select-location" id="select-location" style="margin-left: 20px">
+                        <option value="-1">Seleccione un mercado</option>
+                        <option value="19.369353747257954, -99.14996816162221" >Portales</option>
+                        <option value="19.34708794941382, -99.04109427640547">Santa Cruz Meyehualco</option>	
+                        <option value="19.44317605576515, -99.12979124756764">La Lagunilla</option>
+                        <option value="19.49728493913352, -99.07666742313228">San Felipe de Jesús</option>
+                        <option value="19.465651098202404, -99.14731873393212">La Raza</option>
+                        <option value="19.349642740718135, -99.00171773100715">Las Torres</option>
+                    </select>
+                    <br>
+                    <div id="contenedor-del-mapa"></div>
+                    
+                </div>
+            <div class="products-container">
+
+                <div class="product" data-name="p-1">
+                    <a href="tianguis1.html"><img src="imagenes/tianguis1.jpg" alt=""></a>
+                    <h3>Portales</h3>
+                    <div class="price"></div>
+                </div>
+
+                
+
+                <div class="product" data-name="p-2">
+                    <a href="tianguis2.html"><img src="imagenes/tianguis2.jpg" alt=""></a>
+                    <h3>Santa Cruz Meyehualco</h3>
+                    <div class="price"></div>
+                </div>
+                
+                <div class="product" data-name="p-3">
+                    <a href="tianguis3.html"><img src="imagenes/tianguis3.jpg" alt=""></a>
+                    <h3>La Lagunilla</h3>
+                    <div class="price"></div>
+                </div>
+
+                <div class="product" data-name="p-4">
+                    <a href="tianguis4.html"><img src="imagenes/tianguis4.jpg" alt=""></a>
+                    <h3>San Felipe de Jesús</h3>
+                    <div class="price"></div>
+                </div>
+
+                <div class="product" data-name="p-5">
+                    <a href="tianguis5.html"><img src="imagenes/tianguis5.jpeg" alt=""></a>
+                    <h3>La Raza</h3>
+                    <div class="price"></div>
+                </div>
+
+                <div class="product" data-name="p-6">
+                    <a href="tianguis6.html"><img src="imagenes/tianguis6.jpg" alt=""></a>
+                    <h3>Las Torres</h3>
+
+                </div>
+
+            </div>
+        </section>
+        <br><br><br><br>
+        <footer class="main-footer">
+            <div class="footer__section">
+                <h2 class="footer__title">¿Quiénes somos?</h2>
+                <p class="footer__txt">Somos una empresa dedicada a generar un mayor alcance sobre los diferentes mercados que existen en México.</p>
+            </div>
+            <div class="footer__section">
+                <h2 class="footer__title">Página Web</h2>
+                <p class="footer__txt">ChiliSoftware.com</p>
+                <h2 class="footer__title">Contacto</h2>
+                <p class="footer__txt">Celular : 5528502597</p>
+                <p class="footer__txt">Email : ChiliSoftware@gmail.com</p>
+            </div>
+            <div class="footer__section">
+                <h2 class="footer__title">Menu</h2>
+                <a href="index.html" class="footer__link">INICIO</a>
+                <a href="tienda.html" class="footer__link">TIANGUISES</a>
+                <a href="nosotros.html" class="footer__link">NOSOTROS</a>
+                <a href="sesion.html" class="footer__link">SESION</a>
+                <a href="contacto.html" class="footer__link">AYUDA</a>
+            </div>
+            <div class="footer__section">
+                <h2 class="footer__title">Registrate</h2>
+                <p class="footer__txt">En tu primera compra obtienes envio gratis.</p>
+                <form action="gratis.jsp" method="post" class="footer__link">
+                    <input type="email" class="footer__input" placeholder="Ingresa tu email" name="Email">
+
+                </form>
+            </div>
+            <p class="copy">© 2022 | Design by ChiliSoftware</p>
+        </footer>
+        <!-- partial -->
+        <script  src="script.js"></script>
+        <script src="mapa.js"></script>
+    </body>
+</html>

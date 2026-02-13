@@ -1,0 +1,267 @@
+X<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
+        <script>
+            let preveiwContainer = document.querySelector('.products-preview');
+            let previewBox = preveiwContainer.querySelectorAll('.preview');
+
+            document.querySelectorAll('.products-container .product').forEach(product => {
+                product.onclick = () => {
+                    preveiwContainer.style.display = 'flex';
+                    let name = product.getAttribute('data-name');
+                    previewBox.forEach(preview => {
+                        let target = preview.getAttribute('data-target');
+                        if (name == target) {
+                            preview.classList.add('active');
+                        }
+                    });
+                };
+            });
+
+            previewBox.forEach(close => {
+                close.querySelector('.fa-times').onclick = () => {
+                    close.classList.remove('active');
+                    preveiwContainer.style.display = 'none';
+                };
+            });
+        </script>
+    </head>
+    <body style="background-color: white;">
+        <section class="Menu">
+            <header class="main-header">
+                <div class="container container--flex">
+                    <div class="main-header__container">
+                        <h1 class="main-header__title">MERCATEC</h1>
+                        <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+                        <nav class="main-nav" id="main-nav">
+                            <ul class="menu">
+                                <li class="menu__item"><a href="index.html" class="menu__link">INICIO</a></li>
+                                <li class="menu__item"><a href="tianguises.html" class="menu__link">TIANGUISES</a>
+                                <li class="menu__item"><a href="nosotros.html" class="menu__link">NOSOTROS</a></li>
+                                <li class="menu__item"><a href="usuario.html" class="menu__link">SESION</a></li>
+                                <li class="menu__item"><a href="contacto.html" class="menu__link">AYUDA</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="main-header__container" align="left">
+                        <span class="main-header__txt">Reportar Problema</span>
+                        <p class="main-header__txt"> Llama 5528502597</p>
+                    </div>
+                    <div class="main-header__container">
+                        <a href="sesiiones.html" class="main-header__link"><img src="imagenes/usuario2.png" style="width: 15px; height: 15px"></a>
+                        <a href="carrito.jsp" class="main-header__btn">Mi carrito</a> 
+                        <input type="search" class="main-header__input" placeholder="Buscar productos">
+                        
+                        <a href="index.html"><img src="imagenes/lupa.png" style="width: 20px; height: 20px"></a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <section class="container">
+
+            <header><link rel="stylesheet" href="catalogo.css"/></header>
+            <h3 class="title">&bull; Vendedores &bull;</h3>
+            <h2 class="main-header__txt">Seleccione a su vendedor favorito.</h2>
+
+            <div class="products-container">
+
+                <div class="product" data-name="p-1">
+                    <a href="vendedores.html"><img src="imagenes/vendedor.png" alt=""></a>
+                    <h3>Juan</h3>
+                    <div class="price"></div>
+                </div>
+
+                <div class="product" data-name="p-2">
+                    <a href="productos.html"><img src="imagenes/vendedor.png" alt=""></a>
+                    <h3>Luis</h3>
+                    <div class="price"></div>
+                </div>
+                <div class="product" data-name="p-3">
+                    <a href="productos.html"><img src="imagenes/vendedor.png" alt=""></a>
+                    <h3>Toño</h3>
+                    <div class="price"></div>
+                </div>
+                <div class="product" data-name="p-4">
+                    <a href="productos.html"><img src="imagenes/vendedor.png" alt=""></a>
+                    <h3>Angel</h3>
+                    <div class="price"></div>
+                </div>
+                <div class="product" data-name="p-5">
+                    <a href="productos.html"><img src="imagenes/vendedor.png" alt=""></a>
+                    <h3>Alberto</h3>
+                    <div class="price"></div>
+                </div>
+                <div class="product" data-name="p-6">
+                    <a href="productos.html"><img src="imagenes/vendedor.png" alt=""></a>
+                    <h3>Jose</h3>
+                    <div class="price"></div>
+                </div>
+
+            <div class="products-preview">
+
+                <div class="preview" data-target="p-1">
+                    <i class="fas fa-times"></i>
+                    <img src="images/1.png" alt="">
+                    <h3>organic strawberries</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>( 250 )</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                    <div class="price">$2.00</div>
+                    <div class="buttons">
+                        <a href="#" class="buy">buy now</a>
+                        <a href="#" class="cart">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="preview" data-target="p-2">
+                    <i class="fas fa-times"></i>
+                    <img src="images/2.png" alt="">
+                    <h3>organic onions</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>( 250 )</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                    <div class="price">$2.00</div>
+                    <div class="buttons">
+                        <a href="#" class="buy">buy now</a>
+                        <a href="#" class="cart">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="preview" data-target="p-3">
+                    <i class="fas fa-times"></i>
+                    <img src="images/3.png" alt="">
+                    <h3>organic tomatoes</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>( 250 )</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                    <div class="price">$2.00</div>
+                    <div class="buttons">
+                        <a href="#" class="buy">buy now</a>
+                        <a href="#" class="cart">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="preview" data-target="p-4">
+                    <i class="fas fa-times"></i>
+                    <img src="images/4.png" alt="">
+                    <h3>organic brinjal</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>( 250 )</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                    <div class="price">$2.00</div>
+                    <div class="buttons">
+                        <a href="#" class="buy">buy now</a>
+                        <a href="#" class="cart">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="preview" data-target="p-5">
+                    <i class="fas fa-times"></i>
+                    <img src="images/5.png" alt="">
+                    <h3>organic broccoli</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>( 250 )</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                    <div class="price">$2.00</div>
+                    <div class="buttons">
+                        <a href="#" class="buy">buy now</a>
+                        <a href="#" class="cart">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="preview" data-target="p-6">
+                    <i class="fas fa-times"></i>
+                    <img src="images/6.png" alt="">
+                    <h3>organic potatoes</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>( 250 )</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                    <div class="price">$2.00</div>
+                    <div class="buttons">
+                        <a href="#" class="buy">buy now</a>
+                        <a href="#" class="cart">add to cart</a>
+                    </div>
+                </div>
+
+
+        </section>
+        <br><br><br><br>
+        <footer class="main-footer">
+                        <div class="footer__section">
+                            <h2 class="footer__title">¿Quiénes somos?</h2>
+                            <p class="footer__txt">Somos una empresa dedicada a generar un mayor alcance sobre los diferentes mercados que existen en México.</p>
+                        </div>
+                        <div class="footer__section">
+                            <h2 class="footer__title">Página Web</h2>
+                            <p class="footer__txt">ChiliSoftware.com</p>
+                            <h2 class="footer__title">Contacto</h2>
+                            <p class="footer__txt">Celular : 5528502597</p>
+                            <p class="footer__txt">Email : ChiliSoftware@gmail.com</p>
+                        </div>
+                        <div class="footer__section">
+                            <h2 class="footer__title">Menu</h2>
+                            <a href="index.html" class="footer__link">INICIO</a>
+                            <a href="tienda.html" class="footer__link">TIANGUISES</a>
+                            <a href="nosotros.html" class="footer__link">NOSOTROS</a>
+                            <a href="sesion.html" class="footer__link">SESION</a>
+                            <a href="contacto.html" class="footer__link">AYUDA</a>
+                        </div>
+                        <div class="footer__section">
+                            <h2 class="footer__title">Registrate</h2>
+                            <p class="footer__txt">En tu primera compra obtienes envio gratis.</p>
+                            <form action="gratis.jsp" method="post" class="footer__link">
+                                <input type="email" class="footer__input" placeholder="Ingresa tu email" name="Email">
+
+                            </form>
+                        </div>
+                        <p class="copy">© 2022 | Design by ChiliSoftware</p>
+                    </footer>
+                    <!-- partial -->
+                    <script  src="script.js"></script>
+    </body>
+</html>
