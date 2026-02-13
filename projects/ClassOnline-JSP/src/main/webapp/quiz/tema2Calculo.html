@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style_1.css">
+    </head>
+    <body>
+        <header>
+       
+        </header>
+        <div class="home-box custom-box ">
+            <h3>INSTRUCCIONES:</h3>
+            <P>Elije la opcion correcta <span class="total-question"></span></P>
+            <button type="button" class="btn" onclick="startQuiz()">Iniciar</button> 
+        </div>
+        
+        <div class="quiz-box custom-box hide">
+            <div class="question-number">
+         
+            </div>
+            <div class="question-text">
+         
+            </div>
+            <div class="option-container">
+     
+            </div>
+
+            <div class="next-question-btn">
+                <button type="button" class="btn" onclick="next()">Siguiente</button>
+            </div>
+
+            <div class="answers-indicator">
+        
+            </div>
+              </div>
+            <div class="result-box custom-box hide">
+                <h1>Resultados</h1>
+                <table>
+                    <tr>
+                        <td>PREGUNTAS</td>
+                        <td><span class="total-question"></span></td>
+                    </tr>
+                     <tr>
+                        <td>INTENTOS</td>
+                        <td><span class="total-attempt"></span></td>
+                    </tr>
+                     <tr>
+                        <td>CORRECTAS</td>
+                        <td><span class="total-correct"></span></td>
+                    </tr>
+                    <tr>
+                        <td>INCORRECTAS</td>
+                        <td><span class="total-wrong"></span></td>
+                    </tr>
+                    <tr>
+                        <td>PORCENTAJE</td>
+                        <td><span class="porcentage"></span></td>
+                    </tr>
+                    <tr>
+                        <td>RESULTADO</td>
+                        <td><span class="total-score"></span></td>
+                    </tr>
+                </table>
+                
+                <button type="button" class="btn" onclick="tryAgainQuiz()">INTENTAR DE NUEVO</button>
+                <button type="button" class="btn" onclick="goToHome()">MENU</button>
+            </div>
+      <script src="tema1Calculo.js"></script>
+      <script src="app.js"></script>
+      
+            
+    </body>
+</html>

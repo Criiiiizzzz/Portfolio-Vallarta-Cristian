@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bienvenidos</title>
+    <script>
+            function validar(evento, tipo) {
+                var validos = new Array("1234567890", "qwertyuiopasdfghjklñzxcvbnm QWERTYUIOPASDFGHJKLÑZXCVBNM");
+
+                var x = evento.which ? evento.which : evento.keycode;
+                var caracter = String.fromCharCode(x);
+
+                var cual = 1;
+
+                if (tipo === "numeros")
+                    cual = 0;
+
+                if (validos[cual].indexOf(caracter) === -1)
+                    evento.returnValue = false;
+            }
+        </script>
+</head>
+
+<body>
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2> Bienvenido a Devil Software </h2>
+                <p> ¿Cuentas ya con una sesión?  </p>
+                <button class="sign-up-btn">Iniciar Sesion</button>
+            </div>
+        </div>
+        <form action="index.jsp" name="formulario" id="formulario" method="post" class="formulario"> 
+            <h2 class="create-account">Crear una cuenta</h2>
+            <input type="text"  placeholder="Apodo" name="user" >
+            <input type="text" onkeypress="validar(event, 'letras')" placeholder="Nombre Completo" name="nombre" >
+            <input type="email" placeholder="Email" name="email">
+            <input type="password" placeholder="Contraseña" name="contrasenia">
+            <input type="submit" value="Registrarse" name="enviar">
+        </form>
+    </div>
+    <div class="container-form sign-in">
+        
+        <form class="formulario" action="inicio-sesion.jsp" id="form" method="post">
+            <h2 class="create-account"> Iniciar Sesion</h2>
+            <input type="text"  placeholder="Apodo" name="user" >
+            <input type="password" placeholder="Contraseña" name="contrasenia">
+            <input type="submit" value="Iniciar Sesion">
+        </form>
+        
+        <div class="welcome-back">
+            <div class="message">
+            
+                <h2> Bienvenido de nuevo </h2>
+                <p>Si aun no tienes una cuenta por favor registrese aqui</p>
+                <button class="sign-in-btn"> Registrarse </button>
+        
+            </div>
+        
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

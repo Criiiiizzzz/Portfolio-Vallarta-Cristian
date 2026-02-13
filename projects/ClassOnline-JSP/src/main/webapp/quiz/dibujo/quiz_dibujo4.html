@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title> Devil Software </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script>
+        var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var userParam = urlParams.get('user');
+            
+        function Volver() {
+        window.location.href = ("/quiz_dibujo.html?user=" + userParam);
+        }
+  
+  
+</script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div class="home-box custom-box ">
+        <h3>INSTRUCCIONES:</h3>
+        <P>Responde cada pregunta, el cuestionario es de opcion multiple:<span class="total-question"></span></P>
+        <button type="button" class="btn" onclick="startQuiz()">INICIAR</button>
+    </div>
+
+    <div class="quiz-box custom-box hide">
+        <div class="question-number">
+
+        </div>
+        <div class="question-text">
+
+        </div>
+        <div class="option-container">
+
+        </div>
+
+        <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">Siguiente</button>
+        </div>
+
+        <div class="answers-indicator">
+
+        </div>
+    </div>
+    <div class="result-box custom-box hide">
+        <h1>Resultados</h1>
+        <table>
+            <tr>
+                <td>PREGUNTAS</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>INTENTOS</td>
+                <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+                <td>CORRECTAS</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>INCORRECTAS</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>PORCENTAJE</td>
+                <td><span class="porcentage"></span></td>
+            </tr>
+            <tr>
+                <td>RESULTADO</td>
+                <td><span class="total-score"></span></td>
+            </tr>
+        </table>
+
+        <button type="button" class="btn" onclick="tryAgainQuiz()">INTENTAR DE NUEVO</button>
+        <button type="button" class="btn" onclick="goToHome()">MENU</button>
+        <button type="button" class="btn" onclick="Volver()">REGRESAR</button>
+    </div>
+    <script src="Quiz_dibujo4.js"></script>
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

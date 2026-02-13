@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <title> Devil Software </title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+        <link rel="stylesheet" href="assets/css/owl.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+        <script>
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var userParam = urlParams.get('admin');
+            
+            function usuario() {
+                window.location.href = ("perfil-admin.jsp?admin=" + userParam);
+            }
+            
+            function inicio() {
+                window.location.href = ("inicio-usuario.html?admin=" + userParam);
+            }
+            function asignaturas() {
+                window.location.href = ("asignaturas-admin.html?admin=" + userParam);
+            }
+            function calificaciones() {
+                window.location.href = ("calificaciones-admin.jsp?admin=" + userParam);
+            }
+            function horario() {
+                window.location.href = ("horario-admin.jsp?admin=" + userParam);
+            }
+            function progreso() {
+                window.location.href = ("progreso-admin.jsp?admin=" + userParam);
+                
+            }
+            
+            function juegos() {
+                window.location.href = ("juegos.html?admin=" + userParam);
+            }
+            
+            function calculo() {
+                window.location.href = ("calculodiferencial.html?user=" + userParam);
+            }
+            function quimica() {
+                window.location.href = ("quimicaorg.html?user=" + userParam);
+            }
+            function ingles() {
+                window.location.href = ("ingles.html?user=" + userParam);
+            }
+            function dibujo() {
+                window.location.href = ("dibujot.html?user=" + userParam);
+            }
+        </script>
+        <!--
+        
+        TemplateMo 579 Cyborg Gaming
+        
+        https://templatemo.com/tm-579-cyborg-gaming
+        
+        -->
+    </head>
+
+    <body>
+
+        <!-- ***** Preloader Start ***** -->
+        <div id="js-preloader" class="js-preloader">
+            <div class="preloader-inner">
+                <span class="dot"></span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Preloader End ***** -->
+
+        <!-- ***** Header Area Start ***** -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <!-- ***** Logo Start ***** -->
+                            <a class="logo" href="javascript:void(0)" onclick="inicio()">
+                                <head><img style="width:50px; height: 50px;"src="img/LogoD.png" alt="">Devil Software</head>
+                            </a>
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <li><a class="n" href="javascript:void(0)" onclick="inicio()"> Inicio </a></li>
+                                <li><a class="n" href="javascript:void(0)" onclick="asignaturas()"> Asignaturas </a></li>
+                                <li><a class="n" href="javascript:void(0)" onclick="calificaciones()"> Calificaciones  </a></li>
+                                <li><a class="n" href="javascript:void(0)" onclick="horario()"> Horario  </a></li>
+                                <li><a id="progreso" class="n" href="javascript:void(0)" onclick="progreso()"> Progreso  </a></li>
+                                <li><a class="n" href="javascript:void(0)" onclick="usuario()"><script>document.write(userParam);</script><img src="img/perfiil.png" alt=""></a></li>
+                            </ul>   
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ***** Header Area End ***** -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-content">
+
+                        <!-- ***** Banner Start ***** -->
+                        <div class="main-banner">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="header-text">
+                                        <h6><em> Bienvenido a Devil Software </em></h6>
+                                        <h4><em> El mejor conocimiento al alcance de tu mano </em></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ***** Banner End ***** -->
+
+                        <!-- ***** Most Popular Start ***** -->
+                        <div class="most-popular">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="heading-section">
+                                        <h4> Asignaturas </h4>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-6">
+                                            <div class="item">
+                                                <a href="javascript:void(0)" onclick="calculo()">
+                                                <img src="assets/images/calculofoto.jpg" alt="">
+                                                <h4> Cálculo diferencial</h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                            <div class="item">
+                                                <a href="javascript:void(0)" onclick="quimica()">
+                                                <img src="assets/images/quimicalogo.jpg" alt="">
+                                                <h4> Quimica órganica <br></h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                            <div class="item">
+                                                <a href="javascript:void(0)" onclick="ingles()">
+                                                <img src="assets/images/ingleslogo.jpg" alt="">
+                                                <h4> Ingles IV </h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                            <div class="item">
+                                                <a href="javascript:void(0)" onclick="dibujo()">
+                                                    <img src="assets/images/Dibujologo.jpg" alt="">
+                                                <h4> Dibujo Técnico II <br></h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="main-button">
+                                                <a href="asignaturas.html"> Consultar </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gaming-library">
+                            <div class="col-lg-12">
+                                <div class="heading-section">
+                                    <br>
+                                    <h4> Aplicaciones </h4>
+                                    <div class="main-banner">
+                                        <div class="row">
+                                            <div class="col-lg-7">
+                                                <div class="header-text">
+                                                    <br><br><br><br>
+                                                    <a class="n" href="javascript:void(0)" onclick="progreso()"> <h4> Progreso </h4></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="main-banner">
+                                        <div class="row">
+                                            <div class="col-lg-7">
+                                                <div class="header-text">
+                                                    <br><br><br>
+                                                    <a class="n" href="javascript:void(0)" onclick="horario()"> <h4> Horario </h4></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="main-banner">
+                                        <div class="row">
+                                            <div class="col-lg-7">
+                                                <div class="header-text">
+                                                    <br><br><br>
+                                                    <a class="n" href="javascript:void(0)" onclick="juegos()"> <h4> Juegos </h4></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="col-lg-7" >
+                                <div class="heading-section"> 
+                                    <h4>Nuestras sucursales</h4>
+                                </div>
+                                </div>
+                                
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.1735685773715!2d-98.19240278586278!3d19.012071887124673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc09c9e9b4e4b%3A0x10efcd3051fad88b!2sMamitas%20Men&#39;s%20Club!5e0!3m2!1sen!2smx!4v1675797925662!5m2!1sen!2smx" width="525" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15048.012157360847!2d-99.18407792922422!3d19.455435772510118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8bd9777a765%3A0x57501a5479751d18!2sCECyT%209%20Juan%20de%20Dios%20Batiz!5e0!3m2!1sen!2smx!4v1675795704389!5m2!1sen!2smx" width="525" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <br>
+                            <p align="right"> <a href="https://www.facebook.com/profile.php?id=100090011535267&mibextid=LQQJ4d"><img src="img/facebook.png" style="height: 50px; width: 50px;"> </a>&nbsp;&nbsp;&nbsp;
+                                              <a href="https://instagram.com/pepe_romero___?igshid=NTdlMDg3MTY="><img src="img/instagram.png" style="height: 50px; width: 50px;"> </a>&nbsp;&nbsp;
+                            </p>
+                             
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p> Devil Sotware © </p>
+                    </div>
+                    
+                </div>
+        </footer>
+
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="assets/js/isotope.min.js"></script>
+        <script src="assets/js/owl-carousel.js"></script>
+        <script src="assets/js/tabs.js"></script>
+        <script src="assets/js/popup.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+
+    </body>
+
+</html>

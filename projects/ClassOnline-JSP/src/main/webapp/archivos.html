@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Subir archivo</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<form id="form-upload" method="post" enctype="multipart/form-data">
+		<label for="file-upload">Selecciona un archivo:</label>
+		<input type="file" name="file-upload" id="file-upload">
+		<button type="submit">Subir archivo</button>
+	</form>
+
+	<script>
+		// Manejar el envío del formulario
+		document.getElementById("form-upload").addEventListener("submit", function(event) {
+			event.preventDefault(); // Detener el envío del formulario por defecto
+
+			// Obtener el archivo seleccionado por el usuario
+			var file = document.getElementById("file-upload").files[0];
+			if (!file) {
+				alert("Selecciona un archivo primero");
+				return;
+			}
+
+			// Crear un objeto FormData para enviar el archivo
+			var formData = new FormData();
+			formData.append("file-upload", file);
+
+			// Enviar el archivo al servidor usando AJAX
+			var xhr = new XMLHttpRequest();
+			xhr.open("POST", "upload.jsp", true);
+			xhr.onload = function() {
+				if (xhr.status === 200) {
+					alert("Archivo subido correctamente");
+				} else {
+					alert("Error al subir el archivo");
+				}
+			};
+			xhr.send(formData);
+		});
+	</script>
+</body>
+</html>

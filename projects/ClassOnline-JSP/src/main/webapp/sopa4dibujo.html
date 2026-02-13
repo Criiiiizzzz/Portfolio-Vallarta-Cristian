@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sopa de letras</title>
+
+        <link rel="stylesheet" type="text/css" href="sopa.css">
+        <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+        <script type="text/javascript" src="wordfind.js"></script> 
+        <script type="text/javascript" src="wordfindgame.js"></script> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <title> Devil Software </title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+        <link rel="stylesheet" href="assets/css/owl.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+        <script>
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var userParam = urlParams.get('user');
+
+
+
+
+
+            function inicio() {
+                window.location.href = ("inicio-usuario.html?user=" + userParam);
+            }
+            function asignaturas() {
+                window.location.href = ("asignaturas.html?user=" + userParam);
+            }
+            function calificaciones() {
+                window.location.href = ("calificaciones.jsp?user=" + userParam);
+            }
+            function horario() {
+                window.location.href = ("horario.jsp?user=" + userParam);
+            }
+            function progreso() {
+                window.location.href = ("progreso.jsp?user=" + userParam);
+
+            }
+            function usuario() {
+                window.location.href = ("perfil.jsp?user=" + userParam);
+            }
+            function juegos() {
+                window.location.href = ("juegos.html?user=" + userParam);
+            }
+            function volver() {
+                window.location.href = ("sopasdibujo.html?user=" + userParam);
+            }
+
+            
+        </script>
+    </head>
+    <body>
+        <!-- ***** Preloader End ***** -->
+
+        <!-- ***** Header Area Start ***** -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <!-- ***** Logo Start ***** -->
+                            <a class="logo" href="javascript:void(0)" onclick="inicio()">
+                                <head><img style="width:50px; height: 50px;"src="img/LogoD.png" alt="">Devil Software</head>
+                            </a>
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <li><a class="n" href="javascript:void(0)" onclick="inicio()"> Inicio </a></li>
+                                <li><a class="n" href="javascript:void(0)" onclick="asignaturas()"> Asignaturas </a></li>
+                                <li><a class="n" href="javascript:void(0)" onclick="calificaciones()"> Calificaciones  </a></li>
+                                <li><a class="n" href="javascript:void(0)" onclick="horario()"> Horario  </a></li>
+                                <li><a id="progreso" class="n" href="javascript:void(0)" onclick="progreso()"> Progreso  </a></li>
+                                <li><a class="n" href="javascript:void(0)" onclick="usuario()"><script>document.write(userParam);</script><img src="img/perfiil.png" alt=""></a></li>
+                            </ul>   
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="page-content">
+        
+                  <!-- ***** Banner Start ***** -->
+                  
+        <div class="col-lg-12">
+            <div class="content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4>Líneas convencionales</h4>
+                        <p>Instrucciones: Encuentra las siguientes palabras dentro de la sopa de letras</p>
+                        <div class="left-info" align="center">
+                            
+                            <div id='juego'></div>
+
+                            <div id='Palabras'></div>
+
+                            <div class="main-button" align="left">
+                                <button id='solve' style="font-size: 14px;
+                                color: #fff;
+                                background-color: #e75e8d;
+                                padding: 10px 30px;
+                                display: inline-block;
+                                border-radius: 25px;
+                                font-weight: 400;
+                                text-transform: capitalize;
+                                letter-spacing: 0.5px;
+                                transition: all .3s;
+                                overflow: hidden;">Ver Respuestas</button>
+                            </div>
+                            <script>
+                                var words = ['Lineas', 'Diseño', 'Corta', 'Discontínua', 'Contínua', 'Visibles'];
+                                var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras');
+
+                                var puzzle = wordfind.newPuzzle(words, {height: 18, width: 18, fillBlanks: false});
+                                wordfind.print(puzzle);
+
+                                $('#solve').click(function () {
+                                    wordfindgame.solve(gamePuzzle, words);
+                                });
+
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+                <div class="main-button" align="center">
+                    <br><br>
+                    <a  href="javascript:void(0)" onclick="volver()"> Volver </a>
+                </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p> Devil Sotware © </p>
+                    </div>
+                </div>
+        </footer>
+
+    </body>
+</html>

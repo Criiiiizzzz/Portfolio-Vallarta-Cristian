@@ -1,0 +1,1 @@
+const words = ['Pinceles','Regla', 'Lapiz','Sacapuntas','Tijeras','Laminas','Escuadra','Cartabon','Compas','Banco','Estilografo','Plantillas','Elipse','Circulo','Cubo','Mayusculas','Minusculas','Cursivas','Negritas','Caligrafia'];
